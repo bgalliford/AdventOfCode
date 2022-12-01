@@ -1,6 +1,6 @@
 # Day 1 - Calorie Counting
-
-$calorieList = Get-Content '/Users/galliford/AdventOfCode/2022/Day1CalorieCounting/input.txt'
+# Puzzle solve solution
+$calorieList = Get-Content ./2022/day01/input.txt
 $backpackSum=$currentNo1=$currentNo2=$currentNo3 = 0
 ForEach ($foodItem in $calorieList) {
     If ($foodItem.Length -gt 0) {
@@ -20,4 +20,5 @@ ForEach ($foodItem in $calorieList) {
     }
 }
 $top3Total = $currentNo1 + $currentNo2 + $currentNo3
-Write-Host "Top 3: #1 $currentNo1, #2 $currentNo2, #3 $currentNo3 (total of $top3Total)"
+Write-Host "Top backpack calories: $currentNo1"
+Write-Host "Top 3 backpack calories: $top3Total"
