@@ -4,7 +4,7 @@ $calorieList = Get-Content ./2022/day01/input.txt
 $backpackSum=$currentNo1=$currentNo2=$currentNo3 = 0
 ForEach ($foodItem in $calorieList) {
     If ($foodItem.Length -gt 0) {
-        $backPackSum = $backPackSum + $foodItem
+        $backpackSum = $backpackSum + $foodItem
     } Else {
         If ($backpackSum -gt $currentNo1) {
             $currentNo3 = $currentNo2

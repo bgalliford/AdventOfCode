@@ -4,8 +4,7 @@ $calorieList = Get-Content ./2022/day01/input.txt | Out-String
 $backpacks = $calorieList.Split("`n`n")
 $backpackSums = @()
 ForEach ($backpack in $backpacks) {
-    $backpack = $backpack.Split("`n")
-    $backpackSums += (($backpack | Measure-Object -sum).Sum)
+    $backpackSums += (($backpack.Split("`n") | Measure-Object -Sum).Sum)
 }
 $topBackpack = $backpackSums | Sort-Object -Descending | Select-Object -First 1
 $topThree = ($backpackSums | Sort-Object -Descending | Select-Object -First 3 | Measure-Object -Sum).Sum
