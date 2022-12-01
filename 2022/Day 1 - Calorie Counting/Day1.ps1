@@ -10,17 +10,13 @@ ForEach ($foodItem in $calorieList) {
             $currentNo3 = $currentNo2
             $currentNo2 = $currentNo1
             $currentNo1 = $backpackSum
-            $backpackSum = 0
         } ElseIf ($backpackSum -gt $currentNo2 -And $backpackSum -lt $currentNo1) {
             $currentNo3 = $currentNo2
             $currentNo2 = $backpackSum
-            $backpackSum = 0
         } ElseIf ($backpackSum -gt $currentNo3 -And $backpackSum -lt $currentNo2) {
             $currentNo3 = $backpackSum
-            $backpackSum = 0
-        } Else {
-            $backpackSum = 0
         }
+        $backpackSum = 0
     }
 }
 $top3Total = $currentNo1 + $currentNo2 + $currentNo3
