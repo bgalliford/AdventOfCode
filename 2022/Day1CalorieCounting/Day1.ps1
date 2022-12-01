@@ -1,6 +1,6 @@
 # Day 1 - Calorie Counting
 
-$calorieList = Get-Content '/Users/galliford/AdventOfCode/2022/Day 1 - Calorie Counting/input.txt'
+$calorieList = Get-Content '/Users/galliford/AdventOfCode/2022/Day1CalorieCounting/input.txt'
 $backpackSum=$currentNo1=$currentNo2=$currentNo3 = 0
 ForEach ($foodItem in $calorieList) {
     If ($foodItem.Length -gt 0) {
