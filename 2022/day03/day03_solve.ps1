@@ -14,7 +14,6 @@ For ($i = 0; $i -lt $rucksacks.Length; $i+=3) {
     $currentGroup = $rucksacks[$i..$j]
     $rucksack1, $rucksack2, $rucksack3 = $currentGroup.Split("\n")
     $compare1 = Compare-Object $rucksack1.ToCharArray() $rucksack2.ToCharArray() -CaseSensitive -IncludeEqual | Where-object {$_.SideIndicator -eq "=="} | Select-Object -ExpandProperty InputObject
-    $badgeCounter += (Compare-Object $rucksack3.ToCharArray() $compare1 -CaseSensitive -IncludeEqual | Where-Object {$_.SideIndicator -eq "=="} | Select-Object -ExpandProperty InputObject -First 1)
     $groupBadgePriority += ($alphabet.IndexOf((Compare-Object $rucksack3.ToCharArray() $compare1 -CaseSensitive -IncludeEqual | Where-Object {$_.SideIndicator -eq "=="} | Select-Object -ExpandProperty InputObject -First 1)) + 1)
 }
 Write-Host "Priority score for all group badges is $groupBadgePriority"
