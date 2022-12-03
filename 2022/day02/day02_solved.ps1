@@ -1,7 +1,6 @@
 # Day 2 - Rock Paper Scissors
 # A far more sensible/elegant/efficient solution
-$guide = Get-Content ./2022/day02/input.txt
-$patterns = $guide | Sort-Object -Descending | Group-Object
+$patterns = Get-Content ./2022/day02/input.txt | Sort-Object -Descending | Group-Object
 # Part 1 (incorrect guide interpretation)
 $scores = @()
 ForEach ($pattern in $patterns) {
