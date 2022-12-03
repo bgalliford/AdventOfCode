@@ -8,7 +8,7 @@
 
 ### Part 2 Puzzle
 * Elves are members of three-elf groups with identical badges, identified as a shared item type in their rucksacks
-* The badges need to be retrieved to update their authenticity stickers can be updated, but they are different group-to-group
+* The badges need to be retrieved so that their authenticity stickers can be updated, but they are different types group-to-group
 * We are tasked with determining the item type for the badge in each three-elf group, assigning it a priority score, and summing those up
 
 ### Puzzle Solution
