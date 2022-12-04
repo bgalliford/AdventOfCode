@@ -1,8 +1,7 @@
 # # Day 4 - Camp Cleanup
 # Puzzle solve solution
 $assignments = Get-Content ./2022/day04/input.txt
-$fullCounter = 0
-$partialCounter = 0
+$fullCounter=$partialCounter = 0
 ForEach ($assignment in $assignments) {
     $assignment1, $assignment2 = $assignment.Split(",")
     $end1, $end2 = $assignment1.Split("-")
