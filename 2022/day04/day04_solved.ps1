@@ -1,4 +1,4 @@
-# # Day 4 - Camp Cleanup
+# Day 4 - Camp Cleanup
 # Puzzle solve solution
 $assignments = Get-Content ./2022/day04/input.txt
 $fullCounter=$partialCounter = 0
